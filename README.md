@@ -19,7 +19,7 @@ Following Parameters are allowed
 | --force | Force execution without interruption |
 | --show | Shows the current used config |
 
-All files you want to use as a config must be named `config_****.php`. (Where `****` can be nay numbers or letters)
+All files you want to use as a config must be named `config_****.php`. (Where `****` can be any numbers or letters)
 You can switch between possible config by pressing TAB if you are asked to enter your config name.
 
 ## Possible Uses Cases
