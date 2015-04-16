@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace SwitchConfig
 {
@@ -31,6 +29,7 @@ namespace SwitchConfig
 		public FileHelper() : this(Environment.CurrentDirectory)
 		{
 		}
+
 		/// <summary>
 		///		Constructor
 		/// </summary>
@@ -66,16 +65,15 @@ namespace SwitchConfig
 		/// <returns>True if files are found, otherwise false</returns>
 		public bool FindConfigFiles(bool withSubdir)
 		{
-			Regex reg = new Regex(@"^config(_.+).php");
+			Regex reg = new Regex(@"^config(_.+)\.php");
 
 			//List<string> files = Directory.GetFiles(this.RelevantDirectory, "*.php");
-			var files = Directory.GetFiles(this.RelevantDirectory, "*.php");
-			var	file2 = files.Select(x => Path.GetFileName(x));
-			var file3 = file2.Where(path => reg.IsMatch(path));
-			var file4 = file3.OrderBy(x => x);
-			var file5 = file4.ToList();
+			List<string> files = Directory.GetFiles(this.RelevantDirectory, "*.php")
+										.Select(x => Path.GetFileName(x))
+										.Where(path => reg.IsMatch(path))
+										.OrderBy(x => x).ToList();
 
-			this.ConfigFiles = file5;
+			this.ConfigFiles = files;
 
 			// If list is empty, check subfolders
 			if (withSubdir && this.ConfigFiles.Count == 0)
@@ -242,9 +240,16 @@ namespace SwitchConfig
 			var target = this.FullFileName("config.php");
 			var actual = this.FullFileName(file);
 
-			// Take our file and move it, replacing the current config.php
-			File.Delete(target);
-			File.Copy(actual, target);
+			try
+			{
+				// Take our file and move it, replacing the current config.php
+				File.Delete(target);
+				File.Copy(actual, target);
+			}
+			catch
+			{
+				return false;
+			}
 
 			return true;
 		}
