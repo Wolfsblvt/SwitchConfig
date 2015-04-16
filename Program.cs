@@ -94,6 +94,12 @@ namespace SwitchConfig
 							var search = string.Concat(entered);
 							string file = FileHelper.GetNextConfigFile(search);
 
+							// If file is null, we obviously can't find any, so break here
+							if (file == null)
+							{
+								break;
+							}
+
 							// We need to remove things we have added with the last tab
 							if (lastFileEnd != string.Empty)
 							{
