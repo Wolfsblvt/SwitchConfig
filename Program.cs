@@ -12,10 +12,6 @@ namespace SwitchConfig
 
 		static void Main(string[] arguments)
 		{
-#if DEBUG
-			//arguments = new string[] {"--dir", @"D:\tfs\DEV"};
-#endif
-
 			RelevantDirectory = Environment.CurrentDirectory;
 			var args = Helper.ValidateParameters(arguments);
 
