@@ -1,6 +1,8 @@
 # SwitchConfig
 Allows to switch between different config.php files in a dev environment.
 
+![SwitchConfig Console Output](http://i.imgur.com/TfShiWg.png)
+
 ## Installation
 To install this tool, you need to build the project and use the generated `SwitchConfig.exe`.
 Otherwise you can take the latest exe from https://github.com/Wolfsblvt/SwitchConfig/releases
