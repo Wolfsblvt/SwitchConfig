@@ -38,6 +38,7 @@ namespace SwitchConfig
 			+ Texts.Tab + "--help" + Texts.Tab + "Displays this help" + Environment.NewLine
 			+ Texts.Tab + "--dir ____" + Texts.Tab + "Specify the path to the directory of phpBB" + Environment.NewLine
 			+ Texts.Tab + "--file ____" + Texts.Tab + "Specify the filename wich should be used as config" + Environment.NewLine
-			+ Texts.Tab + "--force" + Texts.Tab + "Force execution without interruption" + Environment.NewLine;
+			+ Texts.Tab + "--force" + Texts.Tab + "Force execution without interruption" + Environment.NewLine
+			+ Texts.Tab + "--show" + Texts.Tab + "Shows the current used config" + Environment.NewLine;
 	}
 }
