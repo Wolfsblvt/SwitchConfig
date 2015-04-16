@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SwitchConfig
 {
@@ -13,7 +12,7 @@ namespace SwitchConfig
 		static void Main(string[] arguments)
 		{
 			RelevantDirectory = Environment.CurrentDirectory;
-			var args = Helper.ValidateParameters(arguments);
+			Dictionary<string, string> args = Helper.ValidateParameters(arguments);
 
 			// Write Title :P
 			Console.WriteLine(Texts.Title);

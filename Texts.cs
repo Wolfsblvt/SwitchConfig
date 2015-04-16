@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SwitchConfig
 {
-	class Texts
+	public class Texts
 	{
 		public static string Title =
 			  "SwitchConfig by Wolfsblvt" + Environment.NewLine

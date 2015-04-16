@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SwitchConfig
 {
@@ -22,7 +20,7 @@ namespace SwitchConfig
 		/// <param name="count">The number of chars to remove</param>
 		public static void ConsoleRemoveChars(int count)
 		{
-			string backsteps = new string('\b', count);
+			var backsteps = new string('\b', count);
 
 			Console.Write(backsteps);
 			Console.Write(new string(' ', count));
@@ -37,7 +35,7 @@ namespace SwitchConfig
 		public static Dictionary<string, string> ValidateParameters(string[] args)
 		{
 			var dict = new Dictionary<string, string>(args.Length / 2);
-			List<string> invalidArguments = new List<string>(args.Length);
+			var invalidArguments = new List<string>(args.Length);
 
 			string[] allowedSingleArgs = {
 				"--" + Args.HELP,
