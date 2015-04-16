@@ -2,7 +2,9 @@
 Allows to switch between different config.php files in a dev environment.
 
 ## Installation
-To install this tool, you need to build the project and use the generated `.exe`.
+To install this tool, you need to build the project and use the generated `SwitchConfig.exe`.
+Otherwise you can take the latest exe from https://github.com/Wolfsblvt/SwitchConfig/releases
+
 You should use the executable in your phpBB root path (total root or inside "phpBB" doesn't matter), or you have to specify the correct directory with `--dir` everytime you run the tool.
 To run it, you can simply click on the file and it will open and ask what you want to do, or you can call it via command line and add parameters
 
