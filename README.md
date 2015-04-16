@@ -26,6 +26,6 @@ You can switch between possible config by pressing TAB if you are asked to enter
 1. **I want to change my config**<br />
 => `SwitchConfig`
 2. **I want to change the used config everytime I start debugging**<br />
-=> `SwitchConfig --file confic_dev.php --force`
+=> `SwitchConfig --file config_dev.php --force`
 3. **I want to see wich of the config files I am using at the moment**<br />
 => `SwitchConfig --show`
