@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SwitchConfig
 {
-	class Program
+	public class Program
 	{
 		static string RelevantDirectory;
 

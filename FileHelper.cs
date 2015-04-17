@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace SwitchConfig
 {
-	class FileHelper
+	public class FileHelper
 	{
 		/// <summary>
 		///		The current directory where the config is searched
