@@ -1,0 +1,10 @@
+Current Features
+****************
+	• Change config files
+	• Option to add parameter for automatic execution
+	• Save config file if not saved
+	• Suggest possible config files
+
+Planned Features
+****************
+	• Nothing

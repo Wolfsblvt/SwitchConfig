@@ -1,0 +1,11 @@
+Actual Version
+**************
+
+-- Version 0.1.0 --------------
+	• First checkin with current features
+
+###########################################################################
+Past Versions
+*************
+
+None

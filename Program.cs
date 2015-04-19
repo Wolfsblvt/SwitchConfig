@@ -114,8 +114,11 @@ namespace SwitchConfig
 							Console.WriteLine();
 							break;
 						default:
-							entered.Add(key.KeyChar);
-							Console.Write(key.KeyChar);
+							if (char.IsLetterOrDigit(key.KeyChar) || char.Equals(key.KeyChar, '_'))
+							{
+								entered.Add(key.KeyChar);
+								Console.Write(key.KeyChar); 
+							}
 							break;
 					}
 				} while (key.Key != ConsoleKey.Enter);
